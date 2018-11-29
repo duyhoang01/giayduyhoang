@@ -3,7 +3,7 @@
 from odoo import api, fields, models
 
 class ResPartner(models.Model):
-    _name = 'qlbh.users'
+    _name = 'res.partner'
 
     name = fields.Char(string='Name')
     code = fields.Char(string='Code', readonly=True)

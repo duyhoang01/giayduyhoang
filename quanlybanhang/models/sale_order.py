@@ -6,7 +6,7 @@ class SaleOrder(models.Model):
     _name = 'sale.order'
 
     name = fields.Char(string='Code', readonly=True, default=lambda self: _('New'))
-    customer_id = fields.Many2one('qlbh.users', string='Customer')
+    customer_id = fields.Many2one('res.partner', string='Customer')
     date_order = fields.Date(string='Date Order', readonly=True)
     sequence = fields.Integer(string='Sequence', default=1, readonly=True)
     order_detail = fields.One2many('sale.order.detail', 'order_id', string='Order Detail', auto_join=True)

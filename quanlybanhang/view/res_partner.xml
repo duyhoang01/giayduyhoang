@@ -4,13 +4,13 @@
         <record id="users_view_act" model="ir.actions.act_window">
             <field name="name">Users</field>
             <field name="type">ir.actions.act_window</field>
-            <field name="res_model">qlbh.users</field>
+            <field name="res_model">res.partner</field>
             <field name="view_mode">tree,form</field>
         </record>
 
         <record id="users_tree_view" model="ir.ui.view">
             <field name="name">user.tree.view</field>
-            <field name="model">qlbh.users</field>
+            <field name="model">res.partner</field>
             <field name="arch" type="xml">
                 <tree string="Users">
                     <field name="name"/>
@@ -23,7 +23,7 @@
 
         <record id="users_form_view" model="ir.ui.view">
             <field name="name">user.form.view</field>
-            <field name="model">qlbh.users</field>
+            <field name="model">res.partner</field>
             <field name="arch" type="xml">
                 <form string="Users">
                     <sheet>
