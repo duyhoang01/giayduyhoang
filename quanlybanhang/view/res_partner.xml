@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="users_view_act" model="ir.actions.act_window">
+            <field name="name">Users</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">qlbh.users</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <record id="users_tree_view" model="ir.ui.view">
+            <field name="name">user.tree.view</field>
+            <field name="model">qlbh.users</field>
+            <field name="arch" type="xml">
+                <tree string="Users">
+                    <field name="name"/>
+                    <field name="code"/>
+                    <field name="position"/>
+                    <!--<field name="username"/>-->
+                </tree>
+            </field>
+        </record>
+
+        <record id="users_form_view" model="ir.ui.view">
+            <field name="name">user.form.view</field>
+            <field name="model">qlbh.users</field>
+            <field name="arch" type="xml">
+                <form string="Users">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="code"/>
+                                <field name="name"/>
+                                <field name="sex"/>
+                                <field name="email"/>
+                                <field name="phone"/>
+                                <field name="address"/>
+                                <field name="position"/>
+                            </group>
+                            <!--<group>-->
+                                <!--<field name="username"/>-->
+                                <!--<field name="password" password="True"/>-->
+                            <!--</group>-->
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- This Menu Item must have a parent and an action -->
+        <menuitem id="user_menu" name="Users" parent="nguoidung_categ" action="users_view_act" sequence="1"/>
+    </data>
+</odoo>

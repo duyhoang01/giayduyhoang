@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="order_detail_01" model="sale.order.detail">
+            <field name="order_id" ref="quanlybanhang.order_01"/>
+            <field name="grouppro_pro_id" ref="quanlybanhang.group_product_detail_01"/>
+            <field name="quantity">10</field>
+            <field name="sequence">1</field>
+        </record>
+        <record id="order_detail_02" model="sale.order.detail">
+            <field name="order_id" ref="quanlybanhang.order_02"/>
+            <field name="grouppro_pro_id" ref="quanlybanhang.group_product_detail_01"/>
+            <field name="quantity">13</field>
+            <field name="sequence">1</field>
+        </record>
+        <record id="order_detail_03" model="sale.order.detail">
+            <field name="order_id" ref="quanlybanhang.order_03"/>
+            <field name="grouppro_pro_id" ref="quanlybanhang.group_product_detail_07"/>
+            <field name="quantity">1</field>
+            <field name="sequence">1</field>
+        </record>
+        <record id="order_detail_04" model="sale.order.detail">
+            <field name="order_id" ref="quanlybanhang.order_03"/>
+            <field name="grouppro_pro_id" ref="quanlybanhang.group_product_detail_03"/>
+            <field name="quantity">1</field>
+            <field name="sequence">1</field>
+        </record>
+        <record id="order_detail_05" model="sale.order.detail">
+            <field name="order_id" ref="quanlybanhang.order_03"/>
+            <field name="grouppro_pro_id" ref="quanlybanhang.group_product_detail_05"/>
+            <field name="quantity">2</field>
+            <field name="sequence">1</field>
+        </record>
+        <record id="order_detail_06" model="sale.order.detail">
+            <field name="order_id" ref="quanlybanhang.order_03"/>
+            <field name="grouppro_pro_id" ref="quanlybanhang.group_product_detail_05"/>
+            <field name="quantity">1</field>
+            <field name="sequence">1</field>
+        </record>
+        <record id="order_detail_07" model="sale.order.detail">
+            <field name="order_id" ref="quanlybanhang.order_03"/>
+            <field name="grouppro_pro_id" ref="quanlybanhang.group_product_detail_11"/>
+            <field name="quantity">10</field>
+            <field name="sequence">1</field>
+        </record>
+        <record id="order_detail_08" model="sale.order.detail">
+            <field name="order_id" ref="quanlybanhang.order_03"/>
+            <field name="grouppro_pro_id" ref="quanlybanhang.group_product_detail_24"/>
+            <field name="quantity">10</field>
+            <field name="sequence">1</field>
+        </record>
+        <record id="order_detail_09" model="sale.order.detail">
+            <field name="order_id" ref="quanlybanhang.order_04"/>
+            <field name="grouppro_pro_id" ref="quanlybanhang.group_product_detail_34"/>
+            <field name="quantity">1</field>
+            <field name="sequence">1</field>
+        </record>
+        <record id="order_detail_10" model="sale.order.detail">
+            <field name="order_id" ref="quanlybanhang.order_05"/>
+            <field name="grouppro_pro_id" ref="quanlybanhang.group_product_detail_13"/>
+            <field name="quantity">2</field>
+            <field name="sequence">1</field>
+        </record>
+        <record id="order_detail_11" model="sale.order.detail">
+            <field name="order_id" ref="quanlybanhang.order_05"/>
+            <field name="grouppro_pro_id" ref="quanlybanhang.group_product_detail_06"/>
+            <field name="quantity">3</field>
+            <field name="sequence">1</field>
+        </record>
+        <record id="order_detail_12" model="sale.order.detail">
+            <field name="order_id" ref="quanlybanhang.order_05"/>
+            <field name="grouppro_pro_id" ref="quanlybanhang.group_product_detail_06"/>
+            <field name="quantity">3</field>
+            <field name="sequence">2</field>
+        </record>
+    </data>
+</odoo>

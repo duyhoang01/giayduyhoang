@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="user_001" model="qlbh.users">
+            <field name="code">U001</field>
+            <field name="name">Nguyễn Công Giang</field>
+            <field name="position">man</field>
+        </record>
+        <record id="user_002" model="qlbh.users">
+            <field name="code">U002</field>
+            <field name="name">Hoàng Thảo Ly</field>
+            <field name="position">emp</field>
+        </record>
+        <record id="user_003" model="qlbh.users">
+            <field name="code">U003</field>
+            <field name="name">Trần Văn Hoàn</field>
+            <field name="position">cus</field>
+        </record>
+        <record id="user_004" model="qlbh.users">
+            <field name="code">U004</field>
+            <field name="name">Đinh Ngọc Trưởng</field>
+            <field name="position">cus</field>
+        </record>
+        <record id="user_005" model="qlbh.users">
+            <field name="code">U005</field>
+            <field name="name">Nguyễn Đăng Dũng</field>
+            <field name="position">cus</field>
+        </record>
+    </data>
+</odoo>

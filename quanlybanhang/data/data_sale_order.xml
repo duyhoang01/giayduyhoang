@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="order_01" model="sale.order">
+            <field name="name">SO001</field>
+            <field name="customer_id" ref="quanlybanhang.user_001"/>
+            <field name="sequence">1</field>
+            <field name="date_order" eval="DateTime.today()"/>
+        </record>
+        <record id="order_02" model="sale.order">
+            <field name="name">SO002</field>
+            <field name="customer_id" ref="quanlybanhang.user_004"/>
+            <field name="sequence">1</field>
+            <field name="date_order" eval="DateTime.today()"/>
+        </record>
+        <record id="order_03" model="sale.order">
+            <field name="name">SO003</field>
+            <field name="customer_id" ref="quanlybanhang.user_002"/>
+            <field name="sequence">1</field>
+            <field name="date_order" eval="DateTime.today()"/>
+        </record>
+        <record id="order_04" model="sale.order">
+            <field name="name">SO004</field>
+            <field name="customer_id" ref="quanlybanhang.user_003"/>
+            <field name="sequence">1</field>
+            <field name="date_order" eval="DateTime.today()"/>
+        </record>
+        <record id="order_05" model="sale.order">
+            <field name="name">SO005</field>
+            <field name="customer_id" ref="quanlybanhang.user_003"/>
+            <field name="sequence">2</field>
+            <field name="date_order" eval="DateTime.today()"/>
+        </record>
+    </data>
+</odoo>

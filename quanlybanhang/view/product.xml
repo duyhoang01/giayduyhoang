@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="qlbh_product" model="ir.actions.act_window">
+            <field name="name">Product</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">product</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <record id="qlbh_product_tree_view" model="ir.ui.view">
+            <field name="name">qlbh.product.tree.view</field>
+            <field name="model">product</field>
+            <field name="arch" type="xml">
+                <tree string="Product">
+                    <field name="code"/>
+                    <field name="name"/>
+                    <field name="category"/>
+                    <field name="provider"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="qlbh_product_form_view" model="ir.ui.view">
+            <field name="name">qlbh.product.form.view</field>
+            <field name="model">product</field>
+            <field name="arch" type="xml">
+                <form string="Product">
+                    <sheet>
+                        <group>
+                            <field name="code"/>
+                            <field name="name"/>
+                            <field name="meta_title"/>
+                            <field name="category"/>
+                            <field name="provider"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- This Menu Item must have a parent and an action -->
+        <menuitem id="qlbh_product_menu" name="Product" parent="sanpham_categ" action="qlbh_product" sequence="2"/>
+    </data>
+</odoo>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="qlbh_group_product_act" model="ir.actions.act_window">
+            <field name="name">Group Product</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">group.product</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <record id="qlbh_group_product_tree_view" model="ir.ui.view">
+            <field name="name">qlbh.group.product.tree.view</field>
+            <field name="model">group.product</field>
+            <field name="arch" type="xml">
+                <tree string="Group Product">
+                    <field name="name"/>
+                    <field name="size"/>
+                    <field name="color"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="qlbh_group_product_form_view" model="ir.ui.view">
+            <field name="name">qlbh.group.product.form.view</field>
+            <field name="model">group.product</field>
+            <field name="arch" type="xml">
+                <form string="Group Product">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="name"/>
+                                <field name="parent"/>
+                            </group>
+                            <group>
+                                <field name="size"/>
+                                <field name="color"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- This Menu Item must have a parent and an action -->
+        <menuitem id="qlbh_group_product_menu" name="Group Product"
+                  parent="sanpham_categ" action="qlbh_group_product_act" sequence="2"/>
+    </data>
+</odoo>

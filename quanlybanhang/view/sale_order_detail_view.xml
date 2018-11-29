@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="sale_order_detail_act" model="ir.actions.act_window">
+            <field name="name">Sale Orders Detail</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">sale.order.detail</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <record id="sale_order_detail_tree_view" model="ir.ui.view">
+            <field name="name">sale.order.detail.tree.view</field>
+            <field name="model">sale.order.detail</field>
+            <field name="arch" type="xml">
+                <tree string="Sale Orders">
+                    <field name="order_id"/>
+                    <field name="name"/>
+                    <field name="quantity"/>
+                    <field name="sequence"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="qlbh_sale_order_detail_form_view" model="ir.ui.view">
+            <field name="name">sale.order.detail.form.view</field>
+            <field name="model">sale.order.detail</field>
+            <field name="arch" type="xml">
+                <form string="Sale Orders">
+                    <sheet>
+                        <group>
+                            <field name="order_id"/>
+                            <field name="name"/>
+                            <field name="quantity"/>
+                            <field name="sequence"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- This Menu Item must have a parent and an action -->
+        <menuitem id="sale_order_detail_menu" name="Sale Orders Detail" parent="donhang_categ" action="sale_order_detail_act" sequence="2"/>
+    </data>
+</odoo>

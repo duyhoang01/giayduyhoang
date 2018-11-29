@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <menuitem id="quanlybanhang_menu_root" name="Quản lý bán hàng" sequence=""/>
+        <!-- This Menu Item Must have a parent -->
+        <menuitem id="nguoidung_categ" name="Người dùng" parent="quanlybanhang_menu_root" sequence="1"/>
+        <menuitem id="sanpham_categ" name="Sản phẩm" parent="quanlybanhang_menu_root" sequence="2"/>
+        <menuitem id="donhang_categ" name="Đơn hàng" parent="quanlybanhang_menu_root" sequence="3"/>
+    </data>
+</odoo>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="sale_order_search_view" model="ir.ui.view">
+            <field name="name">sale.order.search.view</field>
+            <field name="model">sale.order</field>
+            <field name="arch" type="xml">
+                <search string="Sale Orders">
+                    <field name="name" string="Mã đơn hàng" filter_domain="[('name','ilike',self)]"/>
+                    <field name="customer_id" string="Khách hàng" filter_domain="[('customer_id', 'ilike', self)]"/>
+                </search>
+            </field>
+        </record>
+
+        <record id="sale_order_act" model="ir.actions.act_window">
+            <field name="name">Sale Orders</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">sale.order</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <record id="sale_order_tree_view" model="ir.ui.view">
+            <field name="name">sale.order.tree.view</field>
+            <field name="model">sale.order</field>
+            <field name="arch" type="xml">
+                <tree string="Sale Orders">
+                    <field name="name"/>
+                    <field name="customer_id"/>
+                    <field name="date_order"/>
+                    <!--<field name="sequence"/>-->
+                </tree>
+            </field>
+        </record>
+
+        <record id="qlbh_sale_order_form_view" model="ir.ui.view">
+            <field name="name">sale.order.form.view</field>
+            <field name="model">sale.order</field>
+            <field name="arch" type="xml">
+                <form string="Sale Orders">
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                            <field name="customer_id"/>
+                            <field name="date_order"/>
+                            <!--<field name="sequence"/>-->
+                        </group>
+                        <notebook>
+                        <page string="Order Lines">
+                            <field name="order_detail" mode="tree,kanban">
+                                <tree string="Sales Order Lines" editable="bottom">
+                                    <field name="sequence" widget="handle"/>
+                                    <field name="grouppro_pro_id"/>
+                                    <field name="color"/>
+                                    <field name="size"/>
+                                    <field name="name"/>
+                                    <field name="quantity"/>
+                                    <field name="price_unit"/>
+                                    <field name="tax"/>
+                                    <field name="price_subtotal" widget="monetary" options="{'currency_field': 'currency_id'}"/>
+                                </tree>
+                            </field>
+                            <group class="oe_subtotal_footer oe_right" colspan="2" name="sale_total">
+                                <field name="amount_untaxed" widget='monetary' options="{'currency_field': 'currency_id'}"/>
+                                <field name="amount_tax" widget='monetary' options="{'currency_field': 'currency_id'}"/>
+                                <div class="oe_subtotal_footer_separator oe_inline o_td_label">
+                                    <label for="amount_total" />
+                                </div>
+                                <field name="amount_total" nolabel="1" class="oe_subtotal_footer_separator" widget='monetary' options="{'currency_field': 'currency_id'}"/>
+                            </group>
+                            <div class="oe_clear"/>
+                        </page>
+                    </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- This Menu Item must have a parent and an action -->
+        <menuitem id="sale_order_menu" name="Sale Orders" parent="donhang_categ" action="sale_order_act" sequence="1"/>
+    </data>
+</odoo>
